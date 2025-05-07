@@ -53,6 +53,8 @@ $result = handleform();
         <p>login : <?= $result['login'] ?></p>
         <p>mot de passe : <?= $result['password_masked'] ?></p>
         <p>valeur à enregistrer en base : <?= $result['admin'] ?></p>
+    <?php endif; ?>
+
 <?php endif; ?>
 
 
