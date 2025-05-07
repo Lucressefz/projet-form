@@ -1,3 +1,10 @@
+<?php
+
+include_once __DIR__.'/controller/baseController.php';
+
+$result = handleform();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,15 +46,15 @@
 
 </fieldset>
 </main>
+<?php if ($result): ?>
+    <?php if($result['error']): ?>
+        <p style="color:purple;">Veuillez remplir tous les champs!</p>
+    <?php else: ?>
+        <p>login : <?= $result['login'] ?></p>
+        <p>mot de passe : <?= $result['password_masked'] ?></p>
+        <p>valeur à enregistrer en base : <?= $result['admin'] ?></p>
+<?php endif; ?>
 
-<?php
-
-include_once __DIR__.'/controller/baseController.php';
-
-print "<p>Valeur à enregistrer en base : " . $admin."</p>";
-
-
-?>
 
 <footer>
     <p>
