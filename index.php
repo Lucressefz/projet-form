@@ -16,17 +16,9 @@
 <body>
     <main>
     </fieldset>
-    <?php
-
-    include_once __DIR__.'/controller/baseController.php';
-    
-    print "<p>Valeur à enregistrer en base : " . $admin."</p>";
-
-
-    ?>
     <legend>
-        Remplir les champs
-    <legend>
+        Remplir les champs ✍🏾
+    </legend>
 
     <form method="post" action="index.php">
     
@@ -42,16 +34,26 @@
     <label>
         <input type="checkbox" name="admin" value="1"> Vous êtes admin 🔒
     </label>
-    <button type="submit">Envoyer</button>
+    <button type="submit">Envoyer 🚀</button>
 </form>
 
 </fieldset>
 </main>
 
+<?php
+
+include_once __DIR__.'/controller/baseController.php';
+
+print "<p>Valeur à enregistrer en base : " . $admin."</p>";
+
+
+?>
+
 <footer>
     <p>
         &copy; - PHP - 2025
-</p>   
+</p>
+</footer>   
     
 </body>
 </html>
